@@ -1,0 +1,2 @@
+class PlantDiseasesController < ApplicationController
+end

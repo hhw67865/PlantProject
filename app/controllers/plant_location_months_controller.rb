@@ -1,0 +1,2 @@
+class PlantLocationMonthsController < ApplicationController
+end
