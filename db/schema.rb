@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_17_215646) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_18_060622) do
   create_table "bugs", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -100,6 +100,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_17_215646) do
     t.text "harvest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "description"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -115,8 +116,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_17_215646) do
   end
 
   create_table "replies", force: :cascade do |t|
-    t.string "comment"
-    t.string "likes"
+    t.string "reply"
+    t.integer "likes"
     t.integer "comment_id", null: false
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
